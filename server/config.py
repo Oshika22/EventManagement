@@ -1,4 +1,4 @@
 class Config:
-    MONGO_URI = "mongodb+srv://oshika1:tinker@cluster0.ukh05.mongodb.net/EventManagement"
+    MONGO_URI = "your database"
     UPLOAD_FOLDER = 'uploads'
     DEBUG = True
