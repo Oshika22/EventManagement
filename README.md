@@ -1,2 +1,0 @@
-# EventManagement
-EventManagementProject
