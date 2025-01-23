@@ -8,7 +8,7 @@ def create_app():
     app = Flask(__name__)
     
     # Configuration
-    app.config["MONGO_URI"] = "mongodb+srv://oshika1:tinker@cluster0.ukh05.mongodb.net/EventManagement"
+    app.config["MONGO_URI"] = "mongodb+srv://oshika1:leaked@cluster0.ukh05.mongodb.net/EventManagement"
     CORS(app)
     mongo.init_app(app)
 
