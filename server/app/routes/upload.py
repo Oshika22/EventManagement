@@ -4,16 +4,20 @@ from werkzeug.utils import secure_filename
 import os
 from app import mongo
 
+# Uploading the file blueprint
 upload_bp = Blueprint('upload', __name__)
 
 UPLOAD_FOLDER = os.path.join(os.path.dirname(__file__), '../../uploads')
 ALLOWED_EXTENSIONS = {'xlsx', 'xls'}
 
+# Function to check if the file is allowed
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
+# Uploading the file
 @upload_bp.route('/upload', methods=['POST'])
 def upload_file():
+# Checking if the required fields are present
     if 'file' not in request.files:
         return jsonify({"error": "No file part"}), 400
 
@@ -30,6 +34,7 @@ def upload_file():
         file_path = os.path.join(UPLOAD_FOLDER, filename)
         os.makedirs(UPLOAD_FOLDER, exist_ok=True)
         file.save(file_path)
+# Readind the data and extracting the records
         try:
             data = pd.read_excel(file_path)
             records = data.to_dict(orient='records')

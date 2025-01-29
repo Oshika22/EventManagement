@@ -2,7 +2,7 @@ from flask import Blueprint, request, jsonify
 from app import mongo
 
 event_bp = Blueprint('events', __name__)
-
+# To display events
 @event_bp.route('/events', methods=['GET'])
 def get_events():
     try:
@@ -11,6 +11,7 @@ def get_events():
     except Exception as e:
         return jsonify({"error": f"Error fetching events: {e}"}), 500
 
+# To display a specific event and its details
 @event_bp.route('/events/<event_name>', methods=['GET'])
 def get_event(event_name):
     try:
@@ -22,6 +23,7 @@ def get_event(event_name):
     except Exception as e:
         return jsonify({"error": f"Error fetching event {event_name}: {e}"}), 500
 
+# To add an event
 @event_bp.route('/events', methods=['POST'])
 def add_event():
     try:
@@ -31,6 +33,7 @@ def add_event():
     except Exception as e:
         return jsonify({"error": f"Error adding event: {e}"}), 500
 
+# To add participants to an event
 @event_bp.route('/events/<event_name>', methods=['PUT'])
 def update_event(event_name):
     try:
@@ -47,6 +50,7 @@ def update_event(event_name):
         return jsonify({"error": f"Error updating event: {e}"}), 500
 
 
+# To view participants an event
 @event_bp.route('/participants/<event_name>', methods=['GET'])
 def get_participants(event_name):
     try:

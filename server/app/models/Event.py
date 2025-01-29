@@ -1,12 +1,14 @@
 from app import mongo
 
+# Event class
 class Event:
+# Constructor
     def __init__(self, event_name, date, location, description):
         self.event_name = event_name
         self.date = date
         self.location = location
         self.description = description
-
+# Method to convert the object to a dictionary
     def to_dict(self):
         return {
             "event_name": self.event_name,
