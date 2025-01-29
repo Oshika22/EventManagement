@@ -4,7 +4,7 @@ export const FileUpload = () =>  {
   const [file, setFile] = useState(null);
   const [tableName, setTableName] = useState("");
   const [tableType, setTableType] = useState("");
-  
+// function to handle file change
   const handleFileChange = (event) => {
     setFile(event.target.files[0]);
   };
@@ -45,10 +45,10 @@ export const FileUpload = () =>  {
   };
 
   return (
-    <div className="App">
-      <h1>Upload Excel File</h1>
-      <input type="text" onChange={handleNameChange}/>
-      <select onChange={handleTypeChange}>
+    <div className="file-upload bg-orange-500  p-6 rounded-lg shadow-lg max-w-lg mx-auto text-black"> 
+      <h1 className='text-2xl font-semibold mb-4'>Upload Excel File</h1>
+      <input type="text" placeholder='Event Name' onChange={handleNameChange} className="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+      <select onChange={handleTypeChange} className="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">
         <option value="">Select the Type Of event</option>
         <option value="Startup">Startup Event</option>
         <option value="Hackathon">Hackathon Event</option>
@@ -56,8 +56,8 @@ export const FileUpload = () =>  {
         <option value="Registered Starup">Registered Startup</option>
         <option value="other">Others</option>
       </select>
-      <input type="file" accept=".xlsx, .xls" onChange={handleFileChange} />
-      <button onClick={handleFileUpload}>Upload</button>
+      <input type="file" accept=".xlsx, .xls" onChange={handleFileChange} className="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+      <button onClick={handleFileUpload} className="w-full bg-red-500 text-white p-3 rounded-lg hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-blue-500">Upload</button>
     </div>
   );
 }

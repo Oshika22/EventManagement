@@ -8,8 +8,8 @@ const EventCard = ({ event }) => {
   };
   return (
     <div>
-        <button onClick={handleClick} className="event-card bg-slate-300">
-          <h3>{event.event_name}</h3>
+        <button onClick={handleClick} className="w-48 h-60 bg-gradient-to-b from-[#c1310d] to-[#ff9933] rounded-lg p-4 flex items-center justify-center text-white">
+          <h3 className="text-lg font-semibold">{event.event_name}</h3>
           <p>{event.date}</p>
           {/* Add more event details as needed */}
         </button>
