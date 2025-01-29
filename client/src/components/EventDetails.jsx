@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 const EventDetails = () => {
   const [selectedOption, setSelectedOption] = useState('Startup'); // Default option
+  const navigate = useNavigate(); // Initialize useNavigate hook
 
   const toggleOption = () => {
     setSelectedOption((prevOption) => (prevOption === 'Startup' ? 'Hackathon' : 'Startup'));
@@ -63,7 +65,7 @@ const EventDetails = () => {
         {/* Add Event Card */}
         <div
           className="w-48 h-60 bg-gradient-to-b from-[#c1310d] to-[#ff9933] rounded-lg p-4 flex items-center justify-center text-white cursor-pointer"
-          onClick={() => alert('Add Event')}
+          onClick={() => navigate("/add-event")} 
         >
           <h3 className="text-lg font-semibold">Add Event</h3>
         </div>
