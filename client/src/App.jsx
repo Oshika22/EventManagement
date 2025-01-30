@@ -5,6 +5,7 @@ import TopParticipants from './components/TopParticipants';
 import { FileUpload } from './components/FileUpload'
 import { EventList } from './components/EventList'
 import {EventPage } from './pages/EventPage'
+import AddEventPage from './pages/AddEventPage';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,6 +20,7 @@ function App() {
           <Routes>
             <Route path="/" element={<EventList />} />
             <Route path="/event/:eventName" element={<EventPage/>} />
+            <Route path="/add-event" element={<AddEventPage />} />
           </Routes>
         </Router>
       </div>

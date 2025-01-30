@@ -1,12 +1,13 @@
 // In EventList.jsx
 import React, { useEffect, useState } from 'react';
 import EventCard from './EventCard';
-import AddEvent from './AddEvent';
-
+// import AddEvent from './AddEvent';
+import { useNavigate } from "react-router-dom";
 export const EventList = () => {
   const [events, setEvents] = useState([]);
   const [selectedOption, setSelectedOption] = useState('Startup');
-  const [isAddEventVisible, setIsAddEventVisible] = useState(false);
+  const navigate = useNavigate();
+  // const [isAddEventVisible, setIsAddEventVisible] = useState(false);
   //toggle between Startup and Hackathon
   const toggleOption = () => {
     setSelectedOption((prevOption) => (prevOption === 'Startup' ? 'Hackathon' : 'Startup'));
@@ -33,7 +34,7 @@ export const EventList = () => {
 
   return (
     <div className="text-center py-6 bg-black">
-      {isAddEventVisible && <AddEvent />}
+      {/* {isAddEventVisible && <AddEvent />} */}
      {/* Events Title */}
      <h1 className="text-[#ff9900] text-xl mb-4">Events</h1>
  
@@ -78,7 +79,7 @@ export const EventList = () => {
 {/* Add Event Card */}
       <div
         className="w-48 h-60 bg-gradient-to-b from-[#c1310d] to-[#ff9933] rounded-lg p-4 flex items-center justify-center flex-wrap text-white cursor-pointer"
-        onClick={() => setIsAddEventVisible(true)}
+        onClick={() => navigate("/add-event")}
       >
         <h3 className="text-lg font-semibold">Add Event</h3>
       </div>

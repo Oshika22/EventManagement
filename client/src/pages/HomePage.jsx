@@ -2,6 +2,7 @@ import React from "react";
 import EventDetails from "../components/EventDetails"; // EventDetails section
 import TopParticipants from "../components/TopParticipants"; // Top Participants section
 import { FileUpload } from "../components/FileUpload"; // File upload component
+import { EventList } from "../components/EventList";
 
 const HomePage = () => {
   return (
@@ -13,7 +14,7 @@ const HomePage = () => {
 
       {/* Events Section */}
       <section>
-        <EventDetails />
+        <EventList />
       </section>
 
       {/* File Upload Section */}
