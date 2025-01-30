@@ -1,6 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
 const Navbar = () => {
+  const navigate = useNavigate(); // Initialize navigate function
+
   return (
     <header className="bg-[#e68900] shadow-md">
       <div className="container mx-auto flex items-center justify-between py-4 px-4">
@@ -20,7 +23,10 @@ const Navbar = () => {
         </div>
 
         {/* Upload Event Participants Button */}
-        <button className="ml-4 px-4 py-2 border-2 border-white text-white font-semibold rounded-lg hover:bg-[#ffb94d] transition-all">
+        <button
+          className="ml-4 px-4 py-2 border-2 border-white text-white font-semibold rounded-lg hover:bg-[#ffb94d] transition-all"
+          onClick={() => navigate('/file-upload')} // Navigate to FileUploadPage
+        >
           Upload Event Participants
         </button>
       </div>

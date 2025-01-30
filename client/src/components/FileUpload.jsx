@@ -45,19 +45,41 @@ export const FileUpload = () =>  {
   };
 
   return (
-    <div className="file-upload bg-orange-500  p-6 rounded-lg shadow-lg max-w-lg mx-auto text-black"> 
-      <h1 className='text-2xl font-semibold mb-4'>Upload Excel File</h1>
-      <input type="text" placeholder='Event Name' onChange={handleNameChange} className="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"/>
-      <select onChange={handleTypeChange} className="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">
-        <option value="">Select the Type Of event</option>
-        <option value="Startup">Startup Event</option>
-        <option value="Hackathon">Hackathon Event</option>
-        <option value="Conference">Conference Event</option>
-        <option value="Registered Starup">Registered Startup</option>
-        <option value="other">Others</option>
-      </select>
-      <input type="file" accept=".xlsx, .xls" onChange={handleFileChange} className="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"/>
-      <button onClick={handleFileUpload} className="w-full bg-red-500 text-white p-3 rounded-lg hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-blue-500">Upload</button>
+    <div className="file-upload bg-black text-white min-h-screen px-4 py-6"> 
+      <h1 className='text-4xl text-[#ff9900] text-center mb-6'>Upload Excel File</h1>
+      
+      <div className="border border-[#ff9900] rounded-md bg-black mx-auto max-w-4xl p-8 overflow-y-auto" style={{ height: "320px" }}>
+        <input 
+          type="text" 
+          placeholder='Event Name' 
+          onChange={handleNameChange} 
+          className="w-full p-3 mb-4 border border-[#ff9900] rounded-lg bg-black placeholder-[#ff9900] focus:outline-none focus:ring-1 focus:ring-[#ff9900]"
+          style={{ color: '#ff9900' }}
+        />
+        <select 
+          onChange={handleTypeChange} 
+          className="w-full p-3 mb-4 border border-[#ff9900] rounded-lg bg-black text-[#ff9900] focus:outline-none focus:ring-1 focus:ring-[#ff9900]"
+        >
+          <option value="">Select the Type Of event</option>
+          <option value="Startup">Startup Event</option>
+          <option value="Hackathon">Hackathon Event</option>
+          <option value="Conference">Conference Event</option>
+          <option value="Registered Starup">Registered Startup</option>
+          <option value="other">Others</option>
+        </select>
+        <input 
+          type="file" 
+          accept=".xlsx, .xls" 
+          onChange={handleFileChange} 
+          className="w-full p-3 mb-4 border border border-[#ff9900] rounded-lg bg-black text-[#ff9900] focus:outline-none focus:ring-2 focus:ring-[#ff9900]"
+        />
+        <button 
+          onClick={handleFileUpload} 
+          className="w-full bg-black text-[#ff9900] p-3 rounded-lg focus:outline-none focus:ring-3 focus:ring-[#ff9900] focus:border-2 focus:border-[#ff9900]"
+        >
+          Upload
+        </button>
+      </div>
     </div>
   );
 }

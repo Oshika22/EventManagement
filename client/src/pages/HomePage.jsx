@@ -1,7 +1,7 @@
 import React from "react";
-import EventDetails from "../components/EventDetails"; // EventDetails section
+// import EventDetails from "../components/EventDetails"; // EventDetails section
 import TopParticipants from "../components/TopParticipants"; // Top Participants section
-import { FileUpload } from "../components/FileUpload"; // File upload component
+// import { FileUpload } from "../components/FileUpload"; // File upload component
 import { EventList } from "../components/EventList";
 
 const HomePage = () => {
@@ -17,11 +17,11 @@ const HomePage = () => {
         <EventList />
       </section>
 
-      {/* File Upload Section */}
+      {/* File Upload Section
       <section className="mb-8">
         <h1 className="text-2xl font-bold mb-4">File Upload</h1>
         <FileUpload />
-      </section>
+      </section> */}
     </div>
   );
 };
