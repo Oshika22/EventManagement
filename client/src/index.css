@@ -11,3 +11,17 @@
     -ms-overflow-style: none; /* For IE and Edge */
     scrollbar-width: none; /* For Firefox */
   }
+
+/* Hide scrollbars but allow scrolling */
+body {
+  overflow-x: hidden; /* Hides horizontal scrollbar */
+  scrollbar-width: none; /* Hides scrollbar in Firefox */
+}
+
+/* Hide scrollbar for WebKit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
