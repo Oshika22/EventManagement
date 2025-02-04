@@ -2,6 +2,9 @@
 import React, { useEffect, useState } from 'react';
 import EventCard from './EventCard';
 // import AddEvent from './AddEvent';
+
+// import { EventCategories } from './EventCategories';
+
 import { useNavigate } from "react-router-dom";
 export const EventList = () => {
   const [events, setEvents] = useState([]);
@@ -34,6 +37,7 @@ export const EventList = () => {
 
   return (
     <div className="text-center py-6 bg-black">
+      {/* <EventCategories/> */}
       {/* {isAddEventVisible && <AddEvent />} */}
      {/* Events Title */}
      <h1 className="text-[#ff9900] text-xl mb-4">Events</h1>

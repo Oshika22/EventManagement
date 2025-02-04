@@ -27,8 +27,21 @@ def get_event(event_name):
 @event_bp.route('/events', methods=['POST'])
 def add_event():
     try:
+        
         event_data = request.json
-        mongo.db['EventDetails'].insert_one(event_data)
+        event_name = event_data.get('event_name')
+        if not event_name:
+            return jsonify({"error": "Event name is required"}), 400
+        event_exists = mongo.db['EventDetails'].find_one({"event_name": event_name})
+        if event_exists:
+             # Update the existing event
+             mongo.db['EventDetails'].update_one(
+                {"event_name": event_name},
+                {"$set": event_data}  # This updates the entire document
+            )
+        else:
+            # Insert new event record
+            mongo.db['EventDetails'].insert_one(event_data)
         return jsonify({"message": "Event added successfully"}), 201
     except Exception as e:
         return jsonify({"error": f"Error adding event: {e}"}), 500
