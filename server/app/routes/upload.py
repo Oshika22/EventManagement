@@ -34,7 +34,7 @@ def upload_file():
         file_path = os.path.join(UPLOAD_FOLDER, filename)
         os.makedirs(UPLOAD_FOLDER, exist_ok=True)
         file.save(file_path)
-# Readind the data and extracting the records
+# Reading the data and extracting the records
         try:
             data = pd.read_excel(file_path)
             records = data.to_dict(orient='records')

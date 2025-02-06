@@ -2,7 +2,12 @@
 import React, { useEffect, useState } from 'react';
 import EventCard from './EventCard';
 // import AddEvent from './AddEvent';
-import { EventCategories } from './EventCategories';
+// <<<<<<< VarunNarayanJain
+// import { EventCategories } from './EventCategories';
+// =======
+
+// // import { EventCategories } from './EventCategories';
+// >>>>>>> main
 
 import { useNavigate } from "react-router-dom";
 export const EventList = () => {

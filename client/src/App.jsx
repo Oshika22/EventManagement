@@ -2,10 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
-// import TopParticipants from './components/TopParticipants';
-// import { FileUpload } from './components/FileUpload';
 import HomePage from './pages/HomePage'; // HomePage containing event list, top participants, etc.
-// import { EventList } from './components/EventList';
 import { EventPage } from './pages/EventPage';
 import AddEventPage from './pages/AddEventPage';
 import FileUploadPage from './pages/FileUploadPage'; // Import the new page
