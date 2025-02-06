@@ -71,7 +71,7 @@ export const FileUpload = () =>  {
           type="file" 
           accept=".xlsx, .xls" 
           onChange={handleFileChange} 
-          className="w-full p-3 mb-4 border border border-[#ff9900] rounded-lg bg-black text-[#ff9900] focus:outline-none focus:ring-2 focus:ring-[#ff9900]"
+          className="w-full p-3 mb-4 border border-[#ff9900] rounded-lg bg-black text-[#ff9900] focus:outline-none focus:ring-2 focus:ring-[#ff9900]"
         />
         <button 
           onClick={handleFileUpload} 
