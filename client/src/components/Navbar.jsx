@@ -1,5 +1,6 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import React from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { FaHome } from "react-icons/fa"; // Import Home Icon
 
 const Navbar = () => {
   const navigate = useNavigate(); // Initialize navigate function
@@ -7,9 +8,11 @@ const Navbar = () => {
   return (
     <header className="bg-[#e68900] shadow-md">
       <div className="container mx-auto flex items-center justify-between py-4 px-4">
-        {/* Title */}
-        <h1 className="text-white text-xl font-bold"></h1>
-        
+        {/* Home Icon Button */}
+        <button onClick={() => navigate("/")} className="text-white text-2xl ml-12 hover:text-black transition">
+          <FaHome />
+        </button>
+
         {/* Search Bar and Search Button */}
         <div className="flex-1 flex justify-center items-center">
           <input
@@ -25,7 +28,7 @@ const Navbar = () => {
         {/* Upload Event Participants Button */}
         <button
           className="ml-4 px-4 py-2 border-2 border-white text-white font-semibold rounded-lg hover:bg-[#ffb94d] transition-all"
-          onClick={() => navigate('/file-upload')} // Navigate to FileUploadPage
+          onClick={() => navigate("/file-upload")} // Navigate to FileUploadPage
         >
           Upload Event Participants
         </button>

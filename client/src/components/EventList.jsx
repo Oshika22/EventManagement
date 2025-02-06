@@ -2,8 +2,12 @@
 import React, { useEffect, useState } from 'react';
 import EventCard from './EventCard';
 // import AddEvent from './AddEvent';
-
+// <<<<<<< VarunNarayanJain
 // import { EventCategories } from './EventCategories';
+// =======
+
+// // import { EventCategories } from './EventCategories';
+// >>>>>>> main
 
 import { useNavigate } from "react-router-dom";
 export const EventList = () => {
@@ -42,35 +46,22 @@ export const EventList = () => {
      {/* Events Title */}
      <h1 className="text-[#ff9900] text-xl mb-4">Events</h1>
  
-      {/* Sliding Toggle Switch */}
-      <div className="relative w-40 h-12 bg-gray-300 rounded-lg mx-auto mb-6">
-        {/* Slider */}
-        <div
-          className={`absolute top-0 left-0 w-1/2 h-full rounded-lg transition-transform duration-300 ${
-            selectedOption === 'Startup' ? 'bg-[#ff9900] translate-x-0' : 'bg-[#ff9900] translate-x-full'
-          }`}
-        ></div>
- 
-        {/* Startup Label */}
-        <div
-          className={`absolute top-0 left-0 w-1/2 h-full flex items-center justify-center text-sm font-medium cursor-pointer ${
-            selectedOption === 'Startup' ? 'text-black bg-[#ff9900]' : 'text-gray-700 bg-gray-950'
-          }`}
-          onClick={() => setSelectedOption('Startup')}
-        >
-          Startup
-        </div>
- 
-        {/* Hackathon Label */}
-        <div
-          className={`absolute top-0 right-0 w-1/2 h-full flex items-center justify-center text-sm font-medium cursor-pointer ${
-            selectedOption === 'Hackathon' ? 'text-black bg-[#ff9900]' : 'text-gray-700 bg-gray-950'
-          }`}
-          onClick={() => setSelectedOption('Hackathon')}
-        >
-         Hackathon
-       </div>
-     </div>
+      {/* Event Category Buttons */}
+      <div className="flex justify-center space-x-4 mb-6">
+        {["Startup", "Hackathon", "Conference", "Registered Startups", "Others"].map((category) => (
+          <button
+            key={category}
+            className={`px-4 py-2 rounded-lg font-medium border transition-all duration-300 ${
+              selectedOption === category ? "bg-[#ff9900] text-black border-[#ff9900]"  // Active button"
+              : "bg-black text-[#ff9900] border-[#ff9900] hover:bg-[#ff9900] hover:text-black" // Inactive button
+            }`}
+            onClick={() => setSelectedOption(category)}
+          >
+        {category}
+      </button>
+    ))}
+  </div>
+
     {/* Display the events created by the user */}
       <div className="flex flex-wrap justify-center gap-4">
         {events.length > 0 ? (

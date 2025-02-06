@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage'; // HomePage containing event list, top 
 import { EventPage } from './pages/EventPage';
 import AddEventPage from './pages/AddEventPage';
 import FileUploadPage from './pages/FileUploadPage'; // Import the new page
+import Footer from "./components/Footer"; // Import Footer
 
 function App() {
   const [count, setCount] = useState(0);
@@ -22,6 +23,7 @@ function App() {
           <Route path="/file-upload" element={<FileUploadPage />} /> {/* New Route */}
         </Routes>
       </div>
+      <Footer /> {/* Add Footer Here */}
     </>
   );
 }
