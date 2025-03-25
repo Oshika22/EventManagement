@@ -3,7 +3,7 @@ import { FaInstagram, FaLinkedin, FaFacebook, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#e68900] shadow-md text-white py-6 mt-0">
+    <footer className="bg-[#e68900] text-white py-6 mt-0">
       <div className="container mx-auto text-center">
         {/* Extra Line Above Main Text */}
         <p className="text-lg font-semibold mb-2">AIC - Manipal University Jaipur</p>

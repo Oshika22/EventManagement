@@ -75,7 +75,7 @@ export const FileUpload = () =>  {
         />
         <button 
           onClick={handleFileUpload} 
-          className="w-full bg-black text-[#ff9900] p-3 rounded-lg focus:outline-none focus:ring-3 focus:ring-[#ff9900] focus:border-2 focus:border-[#ff9900]"
+          className="w-full bg-black text-[#ff9900] p-3 rounded-lg focus:outline-none focus:ring-3 focus:ring-[#ff9900] focus:border-2 focus:border-[#ff9900] hover:scale:110 "
         >
           Upload
         </button>

@@ -43,15 +43,15 @@ const AddEventPage = () => {
   return (
     <>
       {/* Main Content */}
-      <div className="bg-black text-white min-h-screen px-4 py-6">
+      <div className="text-white min-h-screen px-4 py-6 bg-black">
         {/* Title */}
-        <h1 className="text-4xl text-[#ff9900] text-center mb-6">Create Event</h1>
+        <h1 className="font-bold font-serif text-4xl text-[#ff9900] text-center mb-6">Create Event</h1>
 
         {/* Box below the title */}
-        <div className="border border-[#ff9900] rounded-md bg-black mx-auto max-w-4xl p-8" style={{ height: "500px" }}>
+        <div className="border border-[#ff9900] rounded-md mx-auto max-w-4xl p-8" style={{ height: "500px" }}>
           <div className="flex h-full">
             {/* 70% Section */}
-            <div className="w-[70%] bg-black text-[#ff9900] p-4 overflow-y-scroll no-scrollbar">
+            <div className="w-[70%]  text-[#ff9900] p-4 overflow-y-scroll no-scrollbar">
               {/* Event Name */}
               <div className="mb-4">
                 <label className="block text-lg">Event Name:</label>
@@ -144,12 +144,12 @@ const AddEventPage = () => {
               <button
                 // onClick={handleSubmit}
                 onClick={handleSubmit} 
-                className="w-full p-2 bg-[#ff9900] text-black rounded-md"
-              >Submit</button>
+                className="w-full p-2 bg-orange-500 text-white rounded-md hover:bg-orange-600 transition-all"
+              >Create!!</button>
             </div>
 
             {/* 30% Section with gradient */}
-            <div className="w-[30%] bg-gradient-to-b from-[#c1310d] to-[#ff9933] rounded-md"></div>
+            <div className="w-[30%] bg-gradient-to-b from-[#ff6a00] to-[#ff9933] rounded-md"></div>
           </div>
         </div>
       </div>

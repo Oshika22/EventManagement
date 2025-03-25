@@ -3,10 +3,11 @@ import React from "react";
 import TopParticipants from "../components/TopParticipants"; // Top Participants section
 // import { FileUpload } from "../components/FileUpload"; // File upload component
 import { EventList } from "../components/EventList";
+// import {footer} from '../components/footer';
 
 const HomePage = () => {
   return (
-    <div className="bg-black text-white container mx-auto px-4 py-6">
+    <div className="text-black container mx-auto px-4 py-6">
       {/* Top Participants Section */}
       <section>
         <TopParticipants />
@@ -22,6 +23,7 @@ const HomePage = () => {
         <h1 className="text-2xl font-bold mb-4">File Upload</h1>
         <FileUpload />
       </section> */}
+      {/* <footer/> */}
     </div>
   );
 };
