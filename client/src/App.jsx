@@ -8,13 +8,21 @@ import AddEventPage from './pages/AddEventPage';
 import FileUploadPage from './pages/FileUploadPage'; // Import the new page
 import Footer from "./components/Footer"; // Import Footer
 import FrequentParticipantsPage from './pages/FrequentParticipantsPage'; // Import FrequentParticipants
+import { bgimg } from "./assets/images"; // Import images
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      <Navbar />
-      <div className="bg-black text-black container mx-auto px-4 py-6">
+      <Navbar /> {/* Add Navbar Here */}
+      <div className="text-black container mx-auto px-4 py-6 bg-gradient-to-b from-orange-100 via-yellow-50 to-white" 
+      // style={{
+      //     backgroundImage: `url(${bgimg})`,
+      //     backgroundSize: "cover",
+      //     backgroundPosition: "center",
+      //   }}
+    >
+        
         {/* Routes component is already handled in main.jsx */}
         <Routes>
           <Route path="/" element={<HomePage />} />

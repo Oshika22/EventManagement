@@ -43,7 +43,7 @@ const AddEventPage = () => {
   return (
     <>
       {/* Main Content */}
-      <div className="text-white min-h-screen px-4 py-6 bg-black">
+      <div className="text-white min-h-screen px-4 py-6">
         {/* Title */}
         <h1 className="font-bold font-serif text-4xl text-[#ff9900] text-center mb-6">Create Event</h1>
 
@@ -61,7 +61,7 @@ const AddEventPage = () => {
                   name="event_name"
                   value={eventData.event_name}
                   onChange={handleAddEventChange} 
-                  className="w-full mt-2 p-2 border border-[#ff9900] rounded-md bg-black text-[#ff9900]"
+                  className="w-full mt-2 p-2 border border-[#ff9900] rounded-md bg-white text-[#ff9900]"
                 />
               </div>
 
@@ -71,7 +71,7 @@ const AddEventPage = () => {
                 name="event_type"
                 value={eventData.event_type}
                 onChange={handleAddEventChange} 
-                className="w-full p-3 mb-4 border border-[#ff9900] rounded-lg bg-black text-[#ff9900] focus:outline-none focus:ring-1 focus:ring-[#ff9900]"
+                className="w-full p-3 mb-4 border border-[#ff9900] rounded-lg bg-white text-[#ff9900] focus:outline-none focus:ring-1 focus:ring-[#ff9900]"
               >
                 <option value="">Select the Type Of event</option>
                 <option value="Startup">Startup Event</option>
@@ -90,14 +90,14 @@ const AddEventPage = () => {
                     name="start_date"
                     value={eventData.start_date}
                     onChange={handleAddEventChange}
-                    className="w-full p-2 border border-[#ff9900] rounded-md bg-black text-[#ff9900]"
+                    className="w-full p-2 border border-[#ff9900] rounded-md bg-white text-[#ff9900]"
                   />
                   <input
                     type="date"
                     name="end_date"
                     value={eventData.end_date}
                     onChange={handleAddEventChange}
-                    className="w-full p-2 border border-[#ff9900] rounded-md bg-black text-[#ff9900]"
+                    className="w-full p-2 border border-[#ff9900] rounded-md bg-white text-[#ff9900]"
                   />
                 </div>
               </div>
@@ -111,7 +111,7 @@ const AddEventPage = () => {
                   name="location"
                   value={eventData.location}
                   onChange={handleAddEventChange}
-                  className="w-full mt-2 p-2 border border-[#ff9900] rounded-md bg-black text-[#ff9900]"
+                  className="w-full mt-2 p-2 border border-[#ff9900] rounded-md bg-white text-[#ff9900]"
                 />
               </div>
 
@@ -124,7 +124,7 @@ const AddEventPage = () => {
                   name="guests"
                   value={eventData.guests}
                   onChange={handleAddEventChange}
-                  className="w-full mt-2 p-2 border border-[#ff9900] rounded-md bg-black text-[#ff9900]"
+                  className="w-full mt-2 p-2 border border-[#ff9900] rounded-md bg-white text-[#ff9900]"
                 />
               </div>
 
@@ -136,7 +136,7 @@ const AddEventPage = () => {
                   name="description"
                   value={eventData.description}
                   onChange={handleAddEventChange}
-                  className="w-full mt-2 p-2 border border-[#ff9900] rounded-md bg-black text-[#ff9900] h-32"
+                  className="w-full mt-2 p-2 border border-[#ff9900] rounded-md bg-white text-[#ff9900] h-32"
                 ></textarea>
               </div>
 
@@ -144,8 +144,8 @@ const AddEventPage = () => {
               <button
                 // onClick={handleSubmit}
                 onClick={handleSubmit} 
-                className="w-full p-2 bg-orange-500 text-white rounded-md hover:bg-orange-600 transition-all"
-              >Create!!</button>
+                className="w-full m-2 p-2 border-[#ff9900] bg-gradient-to-r from-[#ff6a00] to-[#ff9c33] text-white font-semibold rounded-lg shadow-md hover:from-[#ff6a00] hover:to-[#ff4b33] transition duration-500 active:from-[#d45500] active:to-[#ff3d00]"
+              >Confirm & Analyze</button>
             </div>
 
             {/* 30% Section with gradient */}

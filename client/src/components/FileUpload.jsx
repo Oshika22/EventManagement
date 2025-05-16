@@ -45,20 +45,20 @@ export const FileUpload = () =>  {
   };
 
   return (
-    <div className="file-upload bg-black text-white min-h-screen px-4 py-6"> 
+    <div className="file-upload w-2/3 text-white min-h-screen px-4 py-6"> 
       <h1 className='text-4xl text-[#ff9900] text-center mb-6'>Upload Excel File</h1>
       
-      <div className="border border-[#ff9900] rounded-md bg-black mx-auto max-w-4xl p-8 overflow-y-auto" style={{ height: "320px" }}>
+      <div className="border border-[#ff9900] rounded-md mx-auto max-w-4xl p-8 overflow-y-auto flex flex-col" style={{ height: "320px" }}>
         <input 
           type="text" 
           placeholder='Event Name' 
           onChange={handleNameChange} 
-          className="w-full p-3 mb-4 border border-[#ff9900] rounded-lg bg-black placeholder-[#ff9900] focus:outline-none focus:ring-1 focus:ring-[#ff9900]"
+          className="w-full p-3 mb-4 border border-[#ff9900] rounded-lg bg-white placeholder-[#ff9900] focus:outline-none focus:ring-1 focus:ring-[#ff9900]"
           style={{ color: '#ff9900' }}
         />
         <select 
           onChange={handleTypeChange} 
-          className="w-full p-3 mb-4 border border-[#ff9900] rounded-lg bg-black text-[#ff9900] focus:outline-none focus:ring-1 focus:ring-[#ff9900]"
+          className="w-full p-3 mb-4 border border-[#ff9900] rounded-lg bg-white text-[#ff9900] focus:outline-none focus:ring-1 focus:ring-[#ff9900]"
         >
           <option value="">Select the Type Of event</option>
           <option value="Startup">Startup Event</option>
@@ -67,15 +67,24 @@ export const FileUpload = () =>  {
           <option value="Registered Starup">Registered Startup</option>
           <option value="other">Others</option>
         </select>
-        <input 
-          type="file" 
-          accept=".xlsx, .xls" 
-          onChange={handleFileChange} 
-          className="w-full p-3 mb-4 border border-[#ff9900] rounded-lg bg-black text-[#ff9900] focus:outline-none focus:ring-2 focus:ring-[#ff9900]"
-        />
+        <div className="relative w-full mb-4">
+            <input
+              type="file"
+              accept=".xlsx, .xls"
+              onChange={handleFileChange}
+              id="file-upload"
+              className="w-full p-3 border border-[#ff9900] rounded-lg bg-white text-[#ff9900] focus:outline-none focus:ring-2 focus:ring-[#ff9900] opacity-0 absolute inset-0 cursor-pointer"
+            />
+            <label
+              htmlFor="file-upload"
+              className="w-full p-3 border border-[#ff9900] rounded-lg bg-white text-[#ff9900] font-semibold cursor-pointer hover:bg-[#ff9900] hover:text-black transition duration-300 flex justify-center items-center"
+            >
+              📂 Choose File
+            </label>
+        </div>
         <button 
           onClick={handleFileUpload} 
-          className="w-full bg-black text-[#ff9900] p-3 rounded-lg focus:outline-none focus:ring-3 focus:ring-[#ff9900] focus:border-2 focus:border-[#ff9900] hover:scale:110 "
+          className="ml-4 px-4 py-2 border-[#ff9900] bg-gradient-to-r from-[#ff6a00] to-[#ff9c33] text-white font-semibold rounded-lg shadow-md hover:from-[#ff6a00] hover:to-[#ff4b33] transition duration-500 active:from-[#d45500] active:to-[#ff3d00]"
         >
           Upload
         </button>

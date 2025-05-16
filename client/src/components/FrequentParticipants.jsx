@@ -26,13 +26,13 @@ const FrequentParticipants = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-black text-[#ff9900] px-6 py-8">
+    <div className="min-h-screen text-[#ff7700] px-6 py-8">
       <h1 className="text-3xl font-bold text-center mb-6">Frequent Participants</h1>
 
       {loading ? (
         <p className="text-center text-lg">Loading...</p>
       ) : error ? (
-        <p className="text-center text-red-500">Error: {error}</p>
+        <p className="text-center text-red-500"> Coming soon</p>
       ) : Object.keys(participants).length === 0 ? (
         <p className="text-center text-lg">No participants found more than once.</p>
       ) : (
