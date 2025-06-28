@@ -1,22 +1,42 @@
-# Project Name
+# Eventra – Event & Startup Data Automation Platform
 
-## Description
-A MERN stack project that allows users to upload Excel files, extract data from specific columns, and store them in MongoDB. The project organizes data into different tables based on the event, ensuring structured and queryable storage.
+Eventra is a real-time event management system designed to automate participant data extraction from Excel files, structure the data into MongoDB, and provide organizers with a powerful dashboard for participant tracking, winner selection, and startup evaluation using AI.
 
-## Features
-- Upload Excel files
-- Extract data from specific columns
-- Store data in MongoDB
-- Organize data into different tables based on event type
-- Navigate through stored data
-- Add new events dynamically
-- Run queries to fetch specific data
+Pre-incubated at AIC MUJ, Eventra supports efficient event execution across multiple organizations and enables forecasting and insight generation.
 
-## Tech Stack
-- **Frontend:** React, Vite
-- **Backend:** Flask
-- **Database:** MongoDB
-- **File Handling:** Pandas
+---
+
+## 🔧 Features
+
+- 📥 Upload Excel registration forms
+- 📊 Automatically extract and structure participant data
+- 🧠 Integrated AI chatbot (Pitchpal) to simulate investor-style feedback on startup submissions
+- 📂 Organize data into collections by event name
+- 🧮 Analytics-ready dashboard with filters and winner selection
+- 🔍 Smart query system to filter and retrieve specific participants
+- 📈 (WIP) Forecast participant trends and event success metrics using ML
+
+---
+
+## 🧑‍💻 Tech Stack
+
+| Layer        | Tech                          |
+|--------------|-------------------------------|
+| Frontend     | React.js, Vite, TailwindCSS   |
+| Backend      | Flask (Python)                |
+| Database     | MongoDB                       |
+| Data Handling| Pandas, NumPy                 |
+| AI Layer     | OpenAI LLM (via API)          |
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/Oshika22/EventManagementAutomated.git
+cd EventManagementAutomated
+
 
 ## Installation
 
@@ -26,7 +46,7 @@ A MERN stack project that allows users to upload Excel files, extract data from 
    ```
 2. Navigate to the project directory:
    ```sh
-   cd EventManagementAutomated
+   cd EventManagement
    ```
 3. Install dependencies:
    ```sh
@@ -48,14 +68,6 @@ MONGO_URI=your_mongodb_connection_string
 PORT=5000
 JWT_SECRET=your_secret_key
 ```
-
-## Usage
-1. Upload an Excel file via the frontend.
-2. The backend processes the file and extracts required data.
-3. Data is stored in MongoDB under different collections based on event type.
-4. Navigate through different events using the frontend.
-5. Add new events through a dedicated form.
-6. Execute queries to retrieve specific event data.
 
 ## API Endpoints
 - `POST /upload` - Uploads an Excel file and processes it.
